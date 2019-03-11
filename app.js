@@ -135,7 +135,6 @@ function proceed(file) {
       GZIP.close();
     }
     readStream.close();
-    writeStream.close();
     fs.truncate(file, function (err) {
       if (err) return pmx.notify(err);
       console.log('"' + final_name + '" has been created');
